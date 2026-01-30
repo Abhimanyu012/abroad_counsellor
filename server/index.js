@@ -15,36 +15,10 @@ const app = express()
 
 // Middleware
 app.use(cors({
-    origin: function (origin, callback) {
-        // Allow requests with no origin (like mobile apps or curl)
-        if (!origin) return callback(null, true)
-
-        // Allow development origins
-        if (
-            origin.includes('localhost') ||
-            origin.includes('127.0.0.1') ||
-            origin.includes('0.0.0.0')
-        ) {
-            return callback(null, true)
-        }
-
-        // Check against CLIENT_URL
-        if (process.env.CLIENT_URL) {
-            const allowedOrigins = process.env.CLIENT_URL.split(',').map(url => url.trim().replace(/\/$/, ''))
-            const normalizedOrigin = origin.replace(/\/$/, '')
-
-            if (allowedOrigins.includes(normalizedOrigin)) {
-                return callback(null, true)
-            }
-        }
-
-        // In production, we should be strict, but let's log the attempt for debugging
-        console.log(`CORS blocked for origin: ${origin}`)
-        callback(new Error('Not allowed by CORS'))
-    },
+    origin: process.env.CLIENT_URL ? process.env.CLIENT_URL.split(',') : true,
     credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
 }))
 app.use(express.json())
 
