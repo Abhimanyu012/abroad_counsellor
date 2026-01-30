@@ -28,7 +28,7 @@ app.use(cors({
             return callback(null, true)
         }
 
-        // Check against CLIENT_URL
+        // Check against CLIENT_URL (comma-separated) if provided
         if (process.env.CLIENT_URL) {
             const allowedOrigins = process.env.CLIENT_URL.split(',').map(url => url.trim().replace(/\/$/, ''))
             const normalizedOrigin = origin.replace(/\/$/, '')
@@ -37,6 +37,19 @@ app.use(cors({
                 return callback(null, true)
             }
         }
+
+        // Allow Netlify preview and custom Netlify sites (convenience for deployments)
+        if (origin.includes('.netlify.app')) {
+            return callback(null, true)
+        }
+
+        // Allow Render (hosting) origins for backend deployed on Render
+        if (origin.includes('render.com')) {
+            return callback(null, true)
+        }
+
+        // Optionally allow other common hosting platforms (uncomment if needed)
+        // if (origin.includes('.vercel.app')) return callback(null, true)
 
         // In production, we should be strict, but let's log the attempt for debugging
         console.log(`CORS blocked for origin: ${origin}`)
