@@ -1,0 +1,1386 @@
+[
+    {
+        "id": "uni_001",
+        "name": "Massachusetts Institute of Technology (MIT)",
+        "country": "USA",
+        "city": "Cambridge",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=mit.edu",
+        "ranking_global": 1,
+        "acceptance_rate": 4.0,
+        "min_gpa": 3.9,
+        "ielts_min": 7.5,
+        "tuition_fee_usd": 62000,
+        "living_cost_usd": 22000,
+        "popular_courses": [
+            "Computer Science",
+            "Engineering"
+        ],
+        "required_docs": [
+            "SOP",
+            "3 LORs",
+            "GRE Score"
+        ],
+        "deadline": "2026-01-05"
+    },
+    {
+        "id": "uni_002",
+        "name": "University of Cambridge",
+        "country": "UK",
+        "city": "Cambridge",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=cam.ac.uk",
+        "ranking_global": 2,
+        "acceptance_rate": 20.0,
+        "min_gpa": 3.8,
+        "ielts_min": 7.5,
+        "tuition_fee_usd": 48000,
+        "living_cost_usd": 18000,
+        "popular_courses": [
+            "Mathematics",
+            "Physics"
+        ],
+        "required_docs": [
+            "UCAS Statement",
+            "2 LORs"
+        ],
+        "deadline": "2025-10-15"
+    },
+    {
+        "id": "uni_003",
+        "name": "University of Oxford",
+        "country": "UK",
+        "city": "Oxford",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=ox.ac.uk",
+        "ranking_global": 3,
+        "acceptance_rate": 17.0,
+        "min_gpa": 3.8,
+        "ielts_min": 7.5,
+        "tuition_fee_usd": 52000,
+        "living_cost_usd": 19000,
+        "popular_courses": [
+            "Philosophy",
+            "Economics"
+        ],
+        "required_docs": [
+            "SOP",
+            "Written Work"
+        ],
+        "deadline": "2025-10-15"
+    },
+    {
+        "id": "uni_004",
+        "name": "Harvard University",
+        "country": "USA",
+        "city": "Cambridge",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=harvard.edu",
+        "ranking_global": 4,
+        "acceptance_rate": 3.4,
+        "min_gpa": 4.0,
+        "ielts_min": 7.5,
+        "tuition_fee_usd": 59000,
+        "living_cost_usd": 21000,
+        "popular_courses": [
+            "Business",
+            "Law",
+            "Medicine"
+        ],
+        "required_docs": [
+            "SOP",
+            "3 LORs",
+            "GRE/GMAT"
+        ],
+        "deadline": "2026-01-01"
+    },
+    {
+        "id": "uni_005",
+        "name": "Stanford University",
+        "country": "USA",
+        "city": "Stanford",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=stanford.edu",
+        "ranking_global": 5,
+        "acceptance_rate": 3.9,
+        "min_gpa": 3.9,
+        "ielts_min": 7.5,
+        "tuition_fee_usd": 65000,
+        "living_cost_usd": 24000,
+        "popular_courses": [
+            "AI",
+            "Entrepreneurship"
+        ],
+        "required_docs": [
+            "SOP",
+            "3 LORs"
+        ],
+        "deadline": "2026-01-05"
+    },
+    {
+        "id": "uni_006",
+        "name": "Imperial College London",
+        "country": "UK",
+        "city": "London",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=imperial.ac.uk",
+        "ranking_global": 6,
+        "acceptance_rate": 14.5,
+        "min_gpa": 3.7,
+        "ielts_min": 7.0,
+        "tuition_fee_usd": 45000,
+        "living_cost_usd": 20000,
+        "popular_courses": [
+            "Science",
+            "Engineering"
+        ],
+        "required_docs": [
+            "SOP",
+            "LORs"
+        ],
+        "deadline": "2026-01-15"
+    },
+    {
+        "id": "uni_007",
+        "name": "ETH Zurich",
+        "country": "Switzerland",
+        "city": "Zurich",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=ethz.ch",
+        "ranking_global": 7,
+        "acceptance_rate": 27.0,
+        "min_gpa": 3.6,
+        "ielts_min": 7.0,
+        "tuition_fee_usd": 1600,
+        "living_cost_usd": 25000,
+        "popular_courses": [
+            "Architecture",
+            "Physics"
+        ],
+        "required_docs": [
+            "SOP",
+            "CV"
+        ],
+        "deadline": "2025-12-15"
+    },
+    {
+        "id": "uni_008",
+        "name": "National University of Singapore (NUS)",
+        "country": "Singapore",
+        "city": "Singapore",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=nus.edu.sg",
+        "ranking_global": 8,
+        "acceptance_rate": 25.0,
+        "min_gpa": 3.7,
+        "ielts_min": 7.0,
+        "tuition_fee_usd": 28000,
+        "living_cost_usd": 12000,
+        "popular_courses": [
+            "Data Science",
+            "Marketing"
+        ],
+        "required_docs": [
+            "SOP",
+            "Financial Proof"
+        ],
+        "deadline": "2026-02-28"
+    },
+    {
+        "id": "uni_009",
+        "name": "University College London (UCL)",
+        "country": "UK",
+        "city": "London",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=ucl.ac.uk",
+        "ranking_global": 9,
+        "acceptance_rate": 15.0,
+        "min_gpa": 3.6,
+        "ielts_min": 7.0,
+        "tuition_fee_usd": 35000,
+        "living_cost_usd": 21000,
+        "popular_courses": [
+            "Education",
+            "Social Sciences"
+        ],
+        "required_docs": [
+            "SOP",
+            "2 LORs"
+        ],
+        "deadline": "2026-01-25"
+    },
+    {
+        "id": "uni_010",
+        "name": "University of Toronto",
+        "country": "Canada",
+        "city": "Toronto",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=utoronto.ca",
+        "ranking_global": 21,
+        "acceptance_rate": 43.0,
+        "min_gpa": 3.5,
+        "ielts_min": 7.0,
+        "tuition_fee_usd": 45000,
+        "living_cost_usd": 18000,
+        "popular_courses": [
+            "Computer Science",
+            "Medicine"
+        ],
+        "required_docs": [
+            "SOP",
+            "2 LORs"
+        ],
+        "deadline": "2026-01-15"
+    },
+    {
+        "id": "uni_011",
+        "name": "University of Melbourne",
+        "country": "Australia",
+        "city": "Melbourne",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=unimelb.edu.au",
+        "ranking_global": 14,
+        "acceptance_rate": 70.0,
+        "min_gpa": 3.2,
+        "ielts_min": 6.5,
+        "tuition_fee_usd": 38000,
+        "living_cost_usd": 19000,
+        "popular_courses": [
+            "Commerce",
+            "Law"
+        ],
+        "required_docs": [
+            "Passport",
+            "Transcripts"
+        ],
+        "deadline": "2026-03-31"
+    },
+    {
+        "id": "uni_012",
+        "name": "Tsinghua University",
+        "country": "China",
+        "city": "Beijing",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=tsinghua.edu.cn",
+        "ranking_global": 25,
+        "acceptance_rate": 2.0,
+        "min_gpa": 3.8,
+        "ielts_min": 6.5,
+        "tuition_fee_usd": 7500,
+        "living_cost_usd": 10000,
+        "popular_courses": [
+            "Engineering",
+            "Business"
+        ],
+        "required_docs": [
+            "SOP",
+            "2 LORs"
+        ],
+        "deadline": "2026-03-01"
+    },
+    {
+        "id": "uni_013",
+        "name": "Technical University of Munich (TUM)",
+        "country": "Germany",
+        "city": "Munich",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=tum.de",
+        "ranking_global": 28,
+        "acceptance_rate": 8.0,
+        "min_gpa": 3.4,
+        "ielts_min": 6.5,
+        "tuition_fee_usd": 0,
+        "living_cost_usd": 12000,
+        "popular_courses": [
+            "Mechanical Engineering",
+            "Informatics"
+        ],
+        "required_docs": [
+            "Uni-Assist VPD",
+            "SOP"
+        ],
+        "deadline": "2026-05-31"
+    },
+    {
+        "id": "uni_014",
+        "name": "University of Tokyo",
+        "country": "Japan",
+        "city": "Tokyo",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=u-tokyo.ac.jp",
+        "ranking_global": 28,
+        "acceptance_rate": 10.0,
+        "min_gpa": 3.5,
+        "ielts_min": 7.0,
+        "tuition_fee_usd": 5000,
+        "living_cost_usd": 15000,
+        "popular_courses": [
+            "Physics",
+            "Robotics"
+        ],
+        "required_docs": [
+            "SOP",
+            "Research Plan"
+        ],
+        "deadline": "2025-12-01"
+    },
+    {
+        "id": "uni_015",
+        "name": "KAIST",
+        "country": "South Korea",
+        "city": "Daejeon",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=kaist.ac.kr",
+        "ranking_global": 56,
+        "acceptance_rate": 20.0,
+        "min_gpa": 3.4,
+        "ielts_min": 6.5,
+        "tuition_fee_usd": 6800,
+        "living_cost_usd": 9000,
+        "popular_courses": [
+            "Electrical Engineering",
+            "AI"
+        ],
+        "required_docs": [
+            "SOP",
+            "LORs"
+        ],
+        "deadline": "2025-12-20"
+    },
+    {
+        "id": "uni_016",
+        "name": "University of Hong Kong (HKU)",
+        "country": "Hong Kong",
+        "city": "Hong Kong",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=hku.hk",
+        "ranking_global": 26,
+        "acceptance_rate": 10.0,
+        "min_gpa": 3.6,
+        "ielts_min": 6.5,
+        "tuition_fee_usd": 22000,
+        "living_cost_usd": 15000,
+        "popular_courses": [
+            "Dentistry",
+            "Education"
+        ],
+        "required_docs": [
+            "SOP",
+            "Passport"
+        ],
+        "deadline": "2025-12-31"
+    },
+    {
+        "id": "uni_017",
+        "name": "University of Amsterdam",
+        "country": "Netherlands",
+        "city": "Amsterdam",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=uva.nl",
+        "ranking_global": 53,
+        "acceptance_rate": 14.0,
+        "min_gpa": 3.3,
+        "ielts_min": 7.0,
+        "tuition_fee_usd": 16000,
+        "living_cost_usd": 15000,
+        "popular_courses": [
+            "Psychology",
+            "Sociology"
+        ],
+        "required_docs": [
+            "SOP",
+            "CV"
+        ],
+        "deadline": "2026-01-15"
+    },
+    {
+        "id": "uni_018",
+        "name": "McGill University",
+        "country": "Canada",
+        "city": "Montreal",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=mcgill.ca",
+        "ranking_global": 30,
+        "acceptance_rate": 40.0,
+        "min_gpa": 3.5,
+        "ielts_min": 6.5,
+        "tuition_fee_usd": 32000,
+        "living_cost_usd": 14000,
+        "popular_courses": [
+            "Medicine",
+            "Mining Engineering"
+        ],
+        "required_docs": [
+            "SOP",
+            "Transcripts"
+        ],
+        "deadline": "2026-01-15"
+    },
+    {
+        "id": "uni_019",
+        "name": "University of Sydney",
+        "country": "Australia",
+        "city": "Sydney",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=sydney.edu.au",
+        "ranking_global": 19,
+        "acceptance_rate": 30.0,
+        "min_gpa": 3.0,
+        "ielts_min": 6.5,
+        "tuition_fee_usd": 37000,
+        "living_cost_usd": 20000,
+        "popular_courses": [
+            "Architecture",
+            "Nursing"
+        ],
+        "required_docs": [
+            "Passport",
+            "LORs"
+        ],
+        "deadline": "2026-02-15"
+    },
+    {
+        "id": "uni_020",
+        "name": "Sorbonne University",
+        "country": "France",
+        "city": "Paris",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=sorbonne-universite.fr",
+        "ranking_global": 60,
+        "acceptance_rate": 15.0,
+        "min_gpa": 3.4,
+        "ielts_min": 6.5,
+        "tuition_fee_usd": 600,
+        "living_cost_usd": 18000,
+        "popular_courses": [
+            "Humanities",
+            "Marine Science"
+        ],
+        "required_docs": [
+            "French B2 Cert",
+            "SOP"
+        ],
+        "deadline": "2026-03-15"
+    },
+    {
+        "id": "uni_021",
+        "name": "Yale University",
+        "country": "USA",
+        "city": "New Haven",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=yale.edu",
+        "ranking_global": 16,
+        "acceptance_rate": 6.0,
+        "min_gpa": 3.9,
+        "ielts_min": 7.5,
+        "tuition_fee_usd": 64000,
+        "living_cost_usd": 20000,
+        "popular_courses": [
+            "Law",
+            "Drama"
+        ],
+        "required_docs": [
+            "SOP",
+            "LORs"
+        ],
+        "deadline": "2026-01-02"
+    },
+    {
+        "id": "uni_022",
+        "name": "Princeton University",
+        "country": "USA",
+        "city": "Princeton",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=princeton.edu",
+        "ranking_global": 17,
+        "acceptance_rate": 4.0,
+        "min_gpa": 3.9,
+        "ielts_min": 7.5,
+        "tuition_fee_usd": 59000,
+        "living_cost_usd": 20000,
+        "popular_courses": [
+            "Public Policy",
+            "Mathematics"
+        ],
+        "required_docs": [
+            "SOP",
+            "3 LORs",
+            "Grading Scale"
+        ],
+        "deadline": "2026-01-01"
+    },
+    {
+        "id": "uni_023",
+        "name": "Columbia University",
+        "country": "USA",
+        "city": "New York",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=columbia.edu",
+        "ranking_global": 23,
+        "acceptance_rate": 3.7,
+        "min_gpa": 3.8,
+        "ielts_min": 7.5,
+        "tuition_fee_usd": 66000,
+        "living_cost_usd": 25000,
+        "popular_courses": [
+            "Journalism",
+            "Finance"
+        ],
+        "required_docs": [
+            "SOP",
+            "Resume",
+            "2 LORs"
+        ],
+        "deadline": "2026-01-15"
+    },
+    {
+        "id": "uni_024",
+        "name": "University of Edinburgh",
+        "country": "UK",
+        "city": "Edinburgh",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=ed.ac.uk",
+        "ranking_global": 22,
+        "acceptance_rate": 33.0,
+        "min_gpa": 3.4,
+        "ielts_min": 7.0,
+        "tuition_fee_usd": 34000,
+        "living_cost_usd": 16000,
+        "popular_courses": [
+            "Informatics",
+            "Veterinary Medicine"
+        ],
+        "required_docs": [
+            "Personal Statement",
+            "LOR",
+            "Transcripts"
+        ],
+        "deadline": "2026-01-25"
+    },
+    {
+        "id": "uni_025",
+        "name": "Nanyang Technological University (NTU)",
+        "country": "Singapore",
+        "city": "Singapore",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=ntu.edu.sg",
+        "ranking_global": 15,
+        "acceptance_rate": 36.0,
+        "min_gpa": 3.5,
+        "ielts_min": 7.0,
+        "tuition_fee_usd": 26000,
+        "living_cost_usd": 12000,
+        "popular_courses": [
+            "Materials Science",
+            "Engineering"
+        ],
+        "required_docs": [
+            "SOP",
+            "Passport",
+            "Birth Certificate"
+        ],
+        "deadline": "2026-03-15"
+    },
+    {
+        "id": "uni_026",
+        "name": "Peking University",
+        "country": "China",
+        "city": "Beijing",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=pku.edu.cn",
+        "ranking_global": 17,
+        "acceptance_rate": 1.0,
+        "min_gpa": 3.7,
+        "ielts_min": 6.5,
+        "tuition_fee_usd": 6500,
+        "living_cost_usd": 9000,
+        "popular_courses": [
+            "International Relations",
+            "Medicine"
+        ],
+        "required_docs": [
+            "SOP",
+            "HSK Certificate",
+            "2 Recommendation Letters"
+        ],
+        "deadline": "2026-03-31"
+    },
+    {
+        "id": "uni_027",
+        "name": "Cornell University",
+        "country": "USA",
+        "city": "Ithaca",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=cornell.edu",
+        "ranking_global": 13,
+        "acceptance_rate": 8.0,
+        "min_gpa": 3.8,
+        "ielts_min": 7.5,
+        "tuition_fee_usd": 63000,
+        "living_cost_usd": 19000,
+        "popular_courses": [
+            "Agriculture",
+            "Hotel Management"
+        ],
+        "required_docs": [
+            "SOP",
+            "Portfolio (for some)",
+            "Transcripts"
+        ],
+        "deadline": "2026-01-02"
+    },
+    {
+        "id": "uni_028",
+        "name": "University of Manchester",
+        "country": "UK",
+        "city": "Manchester",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=manchester.ac.uk",
+        "ranking_global": 32,
+        "acceptance_rate": 56.0,
+        "min_gpa": 3.3,
+        "ielts_min": 6.5,
+        "tuition_fee_usd": 31000,
+        "living_cost_usd": 14000,
+        "popular_courses": [
+            "Physics",
+            "Business"
+        ],
+        "required_docs": [
+            "SOP",
+            "Academic Reference",
+            "English Cert"
+        ],
+        "deadline": "2026-06-30"
+    },
+    {
+        "id": "uni_029",
+        "name": "University of British Columbia (UBC)",
+        "country": "Canada",
+        "city": "Vancouver",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=ubc.ca",
+        "ranking_global": 34,
+        "acceptance_rate": 44.0,
+        "min_gpa": 3.4,
+        "ielts_min": 6.5,
+        "tuition_fee_usd": 42000,
+        "living_cost_usd": 17000,
+        "popular_courses": [
+            "Environmental Science",
+            "Economics"
+        ],
+        "required_docs": [
+            "Personal Profile",
+            "SOP",
+            "Transcripts"
+        ],
+        "deadline": "2026-01-15"
+    },
+    {
+        "id": "uni_030",
+        "name": "KU Leuven",
+        "country": "Belgium",
+        "city": "Leuven",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=kuleuven.be",
+        "ranking_global": 45,
+        "acceptance_rate": 50.0,
+        "min_gpa": 3.0,
+        "ielts_min": 7.0,
+        "tuition_fee_usd": 4500,
+        "living_cost_usd": 12000,
+        "popular_courses": [
+            "Theology",
+            "Statistics"
+        ],
+        "required_docs": [
+            "SOP",
+            "CV",
+            "Degree Certificate"
+        ],
+        "deadline": "2026-03-01"
+    },
+    {
+        "id": "uni_031",
+        "name": "Australian National University (ANU)",
+        "country": "Australia",
+        "city": "Canberra",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=anu.edu.au",
+        "ranking_global": 34,
+        "acceptance_rate": 35.0,
+        "min_gpa": 3.5,
+        "ielts_min": 6.5,
+        "tuition_fee_usd": 36000,
+        "living_cost_usd": 18000,
+        "popular_courses": [
+            "Politics",
+            "Earth Sciences"
+        ],
+        "required_docs": [
+            "Passport",
+            "Transcripts",
+            "LOR"
+        ],
+        "deadline": "2025-12-15"
+    },
+    {
+        "id": "uni_032",
+        "name": "Seoul National University",
+        "country": "South Korea",
+        "city": "Seoul",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=snu.ac.kr",
+        "ranking_global": 41,
+        "acceptance_rate": 15.0,
+        "min_gpa": 3.6,
+        "ielts_min": 6.5,
+        "tuition_fee_usd": 6000,
+        "living_cost_usd": 11000,
+        "popular_courses": [
+            "Modern Languages",
+            "Mechanical Engineering"
+        ],
+        "required_docs": [
+            "SOP",
+            "2 Recommendation Letters",
+            "Portfolio"
+        ],
+        "deadline": "2026-03-10"
+    },
+    {
+        "id": "uni_033",
+        "name": "University of California, Berkeley",
+        "country": "USA",
+        "city": "Berkeley",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=berkeley.edu",
+        "ranking_global": 10,
+        "acceptance_rate": 11.0,
+        "min_gpa": 3.9,
+        "ielts_min": 7.0,
+        "tuition_fee_usd": 48000,
+        "living_cost_usd": 22000,
+        "popular_courses": [
+            "Chemistry",
+            "Computer Science"
+        ],
+        "required_docs": [
+            "SOP",
+            "Personal Insights",
+            "LORs"
+        ],
+        "deadline": "2025-11-30"
+    },
+    {
+        "id": "uni_034",
+        "name": "London School of Economics (LSE)",
+        "country": "UK",
+        "city": "London",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=lse.ac.uk",
+        "ranking_global": 45,
+        "acceptance_rate": 9.0,
+        "min_gpa": 3.7,
+        "ielts_min": 7.5,
+        "tuition_fee_usd": 30000,
+        "living_cost_usd": 22000,
+        "popular_courses": [
+            "Economics",
+            "Sociology"
+        ],
+        "required_docs": [
+            "Academic Statement",
+            "2 LORs",
+            "CV"
+        ],
+        "deadline": "2026-01-15"
+    },
+    {
+        "id": "uni_035",
+        "name": "University of Copenhagen",
+        "country": "Denmark",
+        "city": "Copenhagen",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=ku.dk",
+        "ranking_global": 107,
+        "acceptance_rate": 30.0,
+        "min_gpa": 3.2,
+        "ielts_min": 6.5,
+        "tuition_fee_usd": 14000,
+        "living_cost_usd": 15000,
+        "popular_courses": [
+            "Pharmacy",
+            "Political Science"
+        ],
+        "required_docs": [
+            "SOP",
+            "Diploma",
+            "Course Descriptions"
+        ],
+        "deadline": "2026-01-15"
+    },
+    {
+        "id": "uni_036",
+        "name": "King's College London",
+        "country": "UK",
+        "city": "London",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=kcl.ac.uk",
+        "ranking_global": 40,
+        "acceptance_rate": 13.0,
+        "min_gpa": 3.5,
+        "ielts_min": 7.0,
+        "tuition_fee_usd": 36000,
+        "living_cost_usd": 21000,
+        "popular_courses": [
+            "Dentistry",
+            "Nursing"
+        ],
+        "required_docs": [
+            "SOP",
+            "LOR",
+            "English Test"
+        ],
+        "deadline": "2026-01-25"
+    },
+    {
+        "id": "uni_037",
+        "name": "Indian Institute of Technology Bombay (IITB)",
+        "country": "India",
+        "city": "Mumbai",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=iitb.ac.in",
+        "ranking_global": 118,
+        "acceptance_rate": 0.5,
+        "min_gpa": 3.5,
+        "ielts_min": 6.5,
+        "tuition_fee_usd": 3000,
+        "living_cost_usd": 5000,
+        "popular_courses": [
+            "Civil Engineering",
+            "Aerospace"
+        ],
+        "required_docs": [
+            "JEE/GATE Score",
+            "Passport",
+            "LOR"
+        ],
+        "deadline": "2026-04-15"
+    },
+    {
+        "id": "uni_038",
+        "name": "University of California, Los Angeles (UCLA)",
+        "country": "USA",
+        "city": "Los Angeles",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=ucla.edu",
+        "ranking_global": 29,
+        "acceptance_rate": 9.0,
+        "min_gpa": 3.9,
+        "ielts_min": 7.0,
+        "tuition_fee_usd": 46000,
+        "living_cost_usd": 23000,
+        "popular_courses": [
+            "Film",
+            "Psychology"
+        ],
+        "required_docs": [
+            "SOP",
+            "Personal Insight Questions",
+            "Transcripts"
+        ],
+        "deadline": "2025-11-30"
+    },
+    {
+        "id": "uni_039",
+        "name": "Monash University",
+        "country": "Australia",
+        "city": "Melbourne",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=monash.edu",
+        "ranking_global": 37,
+        "acceptance_rate": 40.0,
+        "min_gpa": 3.0,
+        "ielts_min": 6.5,
+        "tuition_fee_usd": 35000,
+        "living_cost_usd": 18000,
+        "popular_courses": [
+            "Pharmacy",
+            "Education"
+        ],
+        "required_docs": [
+            "Academic Records",
+            "Passport",
+            "SOP"
+        ],
+        "deadline": "2026-05-01"
+    },
+    {
+        "id": "uni_040",
+        "name": "Delft University of Technology",
+        "country": "Netherlands",
+        "city": "Delft",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=tudelft.nl",
+        "ranking_global": 47,
+        "acceptance_rate": 45.0,
+        "min_gpa": 3.2,
+        "ielts_min": 6.5,
+        "tuition_fee_usd": 19000,
+        "living_cost_usd": 14000,
+        "popular_courses": [
+            "Aerospace",
+            "Water Management"
+        ],
+        "required_docs": [
+            "Portfolio",
+            "SOP",
+            "CV"
+        ],
+        "deadline": "2026-01-15"
+    },
+    {
+        "id": "uni_041",
+        "name": "University of Zurich",
+        "country": "Switzerland",
+        "city": "Zurich",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=uzh.ch",
+        "ranking_global": 91,
+        "acceptance_rate": 20.0,
+        "min_gpa": 3.3,
+        "ielts_min": 7.0,
+        "tuition_fee_usd": 1500,
+        "living_cost_usd": 24000,
+        "popular_courses": [
+            "Banking",
+            "Life Sciences"
+        ],
+        "required_docs": [
+            "SOP",
+            "Diplomas",
+            "Transcripts"
+        ],
+        "deadline": "2026-04-30"
+    },
+    {
+        "id": "uni_042",
+        "name": "Johns Hopkins University",
+        "country": "USA",
+        "city": "Baltimore",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=jhu.edu",
+        "ranking_global": 28,
+        "acceptance_rate": 7.5,
+        "min_gpa": 3.9,
+        "ielts_min": 7.0,
+        "tuition_fee_usd": 60000,
+        "living_cost_usd": 19000,
+        "popular_courses": [
+            "Public Health",
+            "Biomedical Engineering"
+        ],
+        "required_docs": [
+            "SOP",
+            "3 LORs",
+            "Research Statement"
+        ],
+        "deadline": "2026-01-04"
+    },
+    {
+        "id": "uni_043",
+        "name": "University of Pennsylvania (UPenn)",
+        "country": "USA",
+        "city": "Philadelphia",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=upenn.edu",
+        "ranking_global": 12,
+        "acceptance_rate": 5.9,
+        "min_gpa": 3.9,
+        "ielts_min": 7.5,
+        "tuition_fee_usd": 63000,
+        "living_cost_usd": 20000,
+        "popular_courses": [
+            "Finance",
+            "Nursing",
+            "Management"
+        ],
+        "required_docs": [
+            "SOP",
+            "Resume",
+            "3 LORs"
+        ],
+        "deadline": "2026-01-05"
+    },
+    {
+        "id": "uni_044",
+        "name": "University of Warwick",
+        "country": "UK",
+        "city": "Coventry",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=warwick.ac.uk",
+        "ranking_global": 67,
+        "acceptance_rate": 14.0,
+        "min_gpa": 3.4,
+        "ielts_min": 6.5,
+        "tuition_fee_usd": 32000,
+        "living_cost_usd": 13000,
+        "popular_courses": [
+            "Business Analytics",
+            "Mathematics"
+        ],
+        "required_docs": [
+            "SOP",
+            "Academic Reference"
+        ],
+        "deadline": "2026-01-25"
+    },
+    {
+        "id": "uni_045",
+        "name": "UNSW Sydney",
+        "country": "Australia",
+        "city": "Sydney",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=unsw.edu.au",
+        "ranking_global": 19,
+        "acceptance_rate": 30.0,
+        "min_gpa": 3.2,
+        "ielts_min": 6.5,
+        "tuition_fee_usd": 39000,
+        "living_cost_usd": 21000,
+        "popular_courses": [
+            "Solar Energy",
+            "Accounting"
+        ],
+        "required_docs": [
+            "Passport",
+            "Transcripts",
+            "SOP"
+        ],
+        "deadline": "2026-03-31"
+    },
+    {
+        "id": "uni_046",
+        "name": "PSL Research University",
+        "country": "France",
+        "city": "Paris",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=psl.eu",
+        "ranking_global": 24,
+        "acceptance_rate": 10.0,
+        "min_gpa": 3.5,
+        "ielts_min": 7.0,
+        "tuition_fee_usd": 1200,
+        "living_cost_usd": 16000,
+        "popular_courses": [
+            "Theoretical Physics",
+            "Philosophy"
+        ],
+        "required_docs": [
+            "SOP",
+            "CV",
+            "French Proficiency (optional)"
+        ],
+        "deadline": "2026-02-15"
+    },
+    {
+        "id": "uni_047",
+        "name": "Osaka University",
+        "country": "Japan",
+        "city": "Osaka",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=osaka-u.ac.jp",
+        "ranking_global": 80,
+        "acceptance_rate": 15.0,
+        "min_gpa": 3.4,
+        "ielts_min": 6.0,
+        "tuition_fee_usd": 5200,
+        "living_cost_usd": 12000,
+        "popular_courses": [
+            "Immunology",
+            "Dentistry"
+        ],
+        "required_docs": [
+            "Research Plan",
+            "SOP",
+            "Transcripts"
+        ],
+        "deadline": "2025-12-10"
+    },
+    {
+        "id": "uni_048",
+        "name": "Hong Kong University of Science and Technology (HKUST)",
+        "country": "Hong Kong",
+        "city": "Clear Water Bay",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=hkust.edu.hk",
+        "ranking_global": 60,
+        "acceptance_rate": 12.0,
+        "min_gpa": 3.5,
+        "ielts_min": 6.5,
+        "tuition_fee_usd": 21000,
+        "living_cost_usd": 14000,
+        "popular_courses": [
+            "Civil Engineering",
+            "MBA"
+        ],
+        "required_docs": [
+            "SOP",
+            "2 LORs",
+            "Passport"
+        ],
+        "deadline": "2025-12-31"
+    },
+    {
+        "id": "uni_049",
+        "name": "Fudan University",
+        "country": "China",
+        "city": "Shanghai",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=fudan.edu.cn",
+        "ranking_global": 50,
+        "acceptance_rate": 3.0,
+        "min_gpa": 3.6,
+        "ielts_min": 6.5,
+        "tuition_fee_usd": 7000,
+        "living_cost_usd": 9000,
+        "popular_courses": [
+            "Journalism",
+            "Clinical Medicine"
+        ],
+        "required_docs": [
+            "SOP",
+            "HSK 5 Cert",
+            "2 LORs"
+        ],
+        "deadline": "2026-03-15"
+    },
+    {
+        "id": "uni_050",
+        "name": "McMaster University",
+        "country": "Canada",
+        "city": "Hamilton",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=mcmaster.ca",
+        "ranking_global": 189,
+        "acceptance_rate": 42.0,
+        "min_gpa": 3.3,
+        "ielts_min": 6.5,
+        "tuition_fee_usd": 30000,
+        "living_cost_usd": 14000,
+        "popular_courses": [
+            "Health Sciences",
+            "Nuclear Engineering"
+        ],
+        "required_docs": [
+            "Personal Statement",
+            "Transcripts"
+        ],
+        "deadline": "2026-02-01"
+    },
+    {
+        "id": "uni_051",
+        "name": "KTH Royal Institute of Technology",
+        "country": "Sweden",
+        "city": "Stockholm",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=kth.se",
+        "ranking_global": 73,
+        "acceptance_rate": 25.0,
+        "min_gpa": 3.3,
+        "ielts_min": 6.5,
+        "tuition_fee_usd": 16000,
+        "living_cost_usd": 12000,
+        "popular_courses": [
+            "Sustainable Energy",
+            "Architecture"
+        ],
+        "required_docs": [
+            "SOP",
+            "LORs",
+            "CV"
+        ],
+        "deadline": "2026-01-15"
+    },
+    {
+        "id": "uni_052",
+        "name": "Duke University",
+        "country": "USA",
+        "city": "Durham",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=duke.edu",
+        "ranking_global": 57,
+        "acceptance_rate": 6.3,
+        "min_gpa": 3.9,
+        "ielts_min": 7.0,
+        "tuition_fee_usd": 61000,
+        "living_cost_usd": 19000,
+        "popular_courses": [
+            "Law",
+            "Medicine",
+            "Public Policy"
+        ],
+        "required_docs": [
+            "SOP",
+            "3 LORs",
+            "Financial Plan"
+        ],
+        "deadline": "2026-01-02"
+    },
+    {
+        "id": "uni_053",
+        "name": "University of Queensland",
+        "country": "Australia",
+        "city": "Brisbane",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=uq.edu.au",
+        "ranking_global": 43,
+        "acceptance_rate": 40.0,
+        "min_gpa": 3.0,
+        "ielts_min": 6.5,
+        "tuition_fee_usd": 33000,
+        "living_cost_usd": 16000,
+        "popular_courses": [
+            "Biodiversity",
+            "Sports Science"
+        ],
+        "required_docs": [
+            "Transcripts",
+            "Passport"
+        ],
+        "deadline": "2026-05-31"
+    },
+    {
+        "id": "uni_054",
+        "name": "TU Eindhoven",
+        "country": "Netherlands",
+        "city": "Eindhoven",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=tue.nl",
+        "ranking_global": 124,
+        "acceptance_rate": 35.0,
+        "min_gpa": 3.2,
+        "ielts_min": 6.5,
+        "tuition_fee_usd": 18000,
+        "living_cost_usd": 13000,
+        "popular_courses": [
+            "Data Science",
+            "Automotive Technology"
+        ],
+        "required_docs": [
+            "SOP",
+            "CV",
+            "GRE (for some)"
+        ],
+        "deadline": "2026-01-15"
+    },
+    {
+        "id": "uni_055",
+        "name": "Heidelberg University",
+        "country": "Germany",
+        "city": "Heidelberg",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=uni-heidelberg.de",
+        "ranking_global": 87,
+        "acceptance_rate": 15.0,
+        "min_gpa": 3.4,
+        "ielts_min": 6.5,
+        "tuition_fee_usd": 3200,
+        "living_cost_usd": 11000,
+        "popular_courses": [
+            "Medicine",
+            "Physics",
+            "Law"
+        ],
+        "required_docs": [
+            "German Proficiency",
+            "SOP",
+            "Transcripts"
+        ],
+        "deadline": "2026-07-15"
+    },
+    {
+        "id": "uni_056",
+        "name": "New York University (NYU)",
+        "country": "USA",
+        "city": "New York",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=nyu.edu",
+        "ranking_global": 38,
+        "acceptance_rate": 12.0,
+        "min_gpa": 3.7,
+        "ielts_min": 7.5,
+        "tuition_fee_usd": 58000,
+        "living_cost_usd": 26000,
+        "popular_courses": [
+            "Film",
+            "Economics",
+            "Applied Math"
+        ],
+        "required_docs": [
+            "SOP",
+            "Portfolio (for Arts)",
+            "2 LORs"
+        ],
+        "deadline": "2026-01-01"
+    },
+    {
+        "id": "uni_057",
+        "name": "University of Bristol",
+        "country": "UK",
+        "city": "Bristol",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=bristol.ac.uk",
+        "ranking_global": 55,
+        "acceptance_rate": 60.0,
+        "min_gpa": 3.3,
+        "ielts_min": 6.5,
+        "tuition_fee_usd": 29000,
+        "living_cost_usd": 14000,
+        "popular_courses": [
+            "Sociology",
+            "Aerospace Engineering"
+        ],
+        "required_docs": [
+            "Personal Statement",
+            "LOR"
+        ],
+        "deadline": "2026-01-25"
+    },
+    {
+        "id": "uni_058",
+        "name": "University of Waterloo",
+        "country": "Canada",
+        "city": "Waterloo",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=uwaterloo.ca",
+        "ranking_global": 112,
+        "acceptance_rate": 45.0,
+        "min_gpa": 3.5,
+        "ielts_min": 6.5,
+        "tuition_fee_usd": 45000,
+        "living_cost_usd": 15000,
+        "popular_courses": [
+            "Actuarial Science",
+            "Computer Science"
+        ],
+        "required_docs": [
+            "AIF (Admission Information Form)",
+            "SOP"
+        ],
+        "deadline": "2026-02-01"
+    },
+    {
+        "id": "uni_059",
+        "name": "Lund University",
+        "country": "Sweden",
+        "city": "Lund",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=lunduniversity.lu.se",
+        "ranking_global": 85,
+        "acceptance_rate": 30.0,
+        "min_gpa": 3.2,
+        "ielts_min": 6.5,
+        "tuition_fee_usd": 15500,
+        "living_cost_usd": 11000,
+        "popular_courses": [
+            "International Development",
+            "Physics"
+        ],
+        "required_docs": [
+            "SOP",
+            "Degree Cert",
+            "CV"
+        ],
+        "deadline": "2026-01-15"
+    },
+    {
+        "id": "uni_060",
+        "name": "University of Southampton",
+        "country": "UK",
+        "city": "Southampton",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=southampton.ac.uk",
+        "ranking_global": 81,
+        "acceptance_rate": 70.0,
+        "min_gpa": 3.0,
+        "ielts_min": 6.5,
+        "tuition_fee_usd": 27000,
+        "living_cost_usd": 12000,
+        "popular_courses": [
+            "Oceanography",
+            "Electronics"
+        ],
+        "required_docs": [
+            "SOP",
+            "LOR",
+            "Transcripts"
+        ],
+        "deadline": "2026-06-30"
+    },
+    {
+        "id": "uni_061",
+        "name": "Georgia Institute of Technology",
+        "country": "USA",
+        "city": "Atlanta",
+        "logo_url": "https://www.google.com/s2/favicons?sz=128&domain=gatech.edu",
+        "ranking_global": 97,
+        "acceptance_rate": 16.0,
+        "min_gpa": 3.8,
+        "ielts_min": 7.0,
+        "tuition_fee_usd": 32000,
+        "living_cost_usd": 17000,
+        "popular_courses": [
+            "Cybersecurity",
+            "Industrial Engineering"
+        ],
+        "required_docs": [
+            "SOP",
+            "2 LORs",
+            "GRE Score"
+        ],
+        "deadline": "2026-01-01"
+    }
+]

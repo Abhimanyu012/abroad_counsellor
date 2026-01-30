@@ -1,0 +1,88 @@
+// Prisma Schema - Database Models
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String   @id @default(cuid())
+  email         String   @unique
+  password      String
+  name          String?
+  phone         String?
+  stage         Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  
+  profile       Profile?
+  universities  UserUniversity[]
+  chatHistory   ChatMessage[]
+}
+
+model Profile {
+  id                String   @id @default(cuid())
+  userId            String   @unique
+  user              User     @relation(fields: [userId], references: [id])
+  
+  // Education
+  currentEducation  String?
+  gpa               Float?
+  backlogs          Int?
+  
+  // Test Scores
+  ieltsScore        Float?
+  toeflScore        Float?
+  greScore          Int?
+  gmatScore         Int?
+  
+  // Preferences
+  preferredCountries String[]
+  preferredCourses   String[]
+  budget            Int?
+  
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
+
+model University {
+  id          String   @id @default(cuid())
+  name        String
+  country     String
+  ranking     Int?
+  courses     String[]
+  requirements Json?
+  
+  users       UserUniversity[]
+}
+
+model UserUniversity {
+  id           String   @id @default(cuid())
+  userId       String
+  universityId String
+  status       String   @default("shortlisted") // shortlisted, applied, accepted, rejected, locked
+  
+  user         User       @relation(fields: [userId], references: [id])
+  university   University @relation(fields: [universityId], references: [id])
+  
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  
+  @@unique([userId, universityId])
+}
+
+model ChatMessage {
+  id        String   @id @default(cuid())
+  userId    String
+  role      String   // user, assistant
+  content   String
+  metadata  Json?
+  
+  user      User     @relation(fields: [userId], references: [id])
+  
+  createdAt DateTime @default(now())
+}

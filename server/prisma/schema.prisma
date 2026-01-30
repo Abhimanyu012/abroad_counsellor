@@ -1,0 +1,150 @@
+// Prisma Schema for Study-Abroad Platform
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// User model with stage tracking
+model User {
+  id                 String   @id @default(cuid())
+  email              String   @unique
+  password           String
+  name               String?
+  
+  // Stage tracking (1-8)
+  currentStage       Int      @default(1)
+  onboardingComplete Boolean  @default(false)
+  
+  // Profile data
+  educationLevel     String?  // bachelors, masters, phd
+  gpa                Float?
+  budget             Int?     // Annual budget in USD
+  
+  // Test scores
+  ielts              Float?
+  toefl              Int?
+  gre                Int?
+  gmat               Int?
+  
+  // Preferences (stored as JSON string for SQLite)
+  targetCountry      String?
+  // preferredCourses stored as comma-separated string
+  preferredCourses   String?
+  
+  // New fields for complete profile
+  intendedDegree     String?  // bachelors, masters, mba, phd
+  targetIntakeYear   Int?     // e.g., 2026
+  sopStatus          String?  @default("not_started") // not_started, draft, ready
+  fundingPlan        String?  // self, scholarship, loan
+  
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+  
+  // Relations
+  selections         Selection[]
+  todos              Todo[]
+  chatMessages       ChatMessage[]
+}
+
+// University model
+model University {
+  id                 String   @id @default(cuid())
+  name               String
+  country            String
+  city               String
+  logoUrl            String?
+  website            String?
+  
+  // Rankings
+  rankingGlobal      Int?
+  rankingCountry     Int?
+  
+  // Requirements (stored as comma-separated for SQLite)
+  minGpa             Float?
+  ieltsMin           Float?
+  toeflMin           Int?
+  greMin             Int?
+  gmatMin            Int?
+  
+  // Fees
+  tuitionFeeUsd      Int?
+  livingCostUsd      Int?
+  
+  // Admission
+  acceptanceRate     Float?
+  deadline           String?
+  
+  // Programs (stored as comma-separated for SQLite)
+  popularCourses     String?
+  
+  // Documents (stored as comma-separated for SQLite)
+  requiredDocs       String?
+  
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+  
+  // Relations
+  selections         Selection[]
+}
+
+// Selection model - user's university selections
+model Selection {
+  id                 String   @id @default(cuid())
+  userId             String
+  universityId       String
+  
+  status             String   @default("SHORTLISTED") // SHORTLISTED, LOCKED
+  category           String?  // DREAM, TARGET, SAFE
+  notes              String?
+  
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+  
+  // Relations
+  user               User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  university         University @relation(fields: [universityId], references: [id], onDelete: Cascade)
+  
+  @@unique([userId, universityId])
+}
+
+// Todo model - AI-generated and user tasks
+model Todo {
+  id                 String   @id @default(cuid())
+  userId             String
+  
+  task               String
+  completed          Boolean  @default(false)
+  priority           String   @default("MEDIUM") // LOW, MEDIUM, HIGH
+  dueDate            DateTime?
+  
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+  
+  // Relations
+  user               User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+// ChatMessage model - conversation history with AI
+model ChatMessage {
+  id                 String   @id @default(cuid())
+  userId             String
+  
+  role               String   // user, assistant
+  content            String
+  
+  // Tool calls result (JSON string for SQLite)
+  actions            String?
+  metadata           String?
+  
+  createdAt          DateTime @default(now())
+  
+  user               User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([createdAt])
+}
