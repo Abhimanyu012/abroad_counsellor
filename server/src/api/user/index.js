@@ -1,6 +1,6 @@
 // User Routes
 import express from 'express'
-import { getProfile, updateProfile, completeOnboarding, updateStage } from './userController.js'
+import { getProfile, updateProfile, completeOnboarding, updateStage, resetStage } from './userController.js'
 import { authGuard } from '../../middleware/authGuard.js'
 
 const router = express.Router()
@@ -12,5 +12,6 @@ router.get('/profile', getProfile)
 router.put('/profile', updateProfile)
 router.put('/onboarding', completeOnboarding)
 router.put('/stage', updateStage)
+router.post('/reset-stage', resetStage)
 
 export default router

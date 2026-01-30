@@ -7,6 +7,7 @@ import {
     Bot, AlertCircle, Wallet, BookOpen, GraduationCap, FileText,
     Menu, X
 } from 'lucide-react'
+import logo from '../../assets/logo.svg'
 import { useAuth, useFlow, STAGES } from '../../context'
 import { counsellorApi, todosApi } from '../../api'
 import { PageWrapper } from '../../components/ui/PageWrapper'
@@ -199,9 +200,7 @@ export default function CounsellorPage() {
                 {/* Branding & Mobile Close */}
                 <div className="h-[72px] flex items-center justify-between px-6 border-b border-white/5">
                     <Link to="/dashboard" className="flex items-center gap-3 group">
-                        <div className="w-8 h-8 rounded-lg bg-linear-to-br from-violet-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-violet-500/20 group-hover:shadow-violet-500/40 transition-all">
-                            <Sparkles className="w-4 h-4 text-white" />
-                        </div>
+                        <img src={logo} alt="AICOUNSELLOR" className="w-8 h-8 rounded-lg object-contain shadow-md" />
                         <div className="flex flex-col">
                             <span className="text-sm font-black text-white uppercase tracking-widest">AICOUNSELLOR</span>
                             <span className="text-[9px] text-zinc-500 font-bold uppercase tracking-[0.2em]">INTELLIGENCE</span>
@@ -311,7 +310,22 @@ export default function CounsellorPage() {
                         </Link>
                     </div>
 
+
                     <div className="pointer-events-auto flex items-center gap-3 backdrop-blur-sm bg-black/40 px-4 py-2 rounded-full border border-white/5 ml-auto">
+                        {/* New Navigation Buttons */}
+                        <div className="flex items-center gap-2 mr-4 pr-4 border-r border-white/10">
+                            <Link to="/universities">
+                                <Button variant="ghost" className="h-6 text-[10px] font-bold uppercase tracking-wider px-2 hover:bg-white/10 text-zinc-400 hover:text-white">
+                                    Shortlist
+                                </Button>
+                            </Link>
+                            <Link to="/locked">
+                                <Button variant="ghost" className="h-6 text-[10px] font-bold uppercase tracking-wider px-2 hover:bg-white/10 text-zinc-400 hover:text-white">
+                                    Locked
+                                </Button>
+                            </Link>
+                        </div>
+
                         <div className="flex gap-1">
                             {[1, 2, 3, 4, 5, 6, 7, 8].map(s => (
                                 <div

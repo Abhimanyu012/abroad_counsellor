@@ -6,6 +6,7 @@ import {
     User, GraduationCap, DollarSign, BookOpen, Globe,
     ArrowLeft, Save, Loader2, CheckCircle, AlertCircle
 } from 'lucide-react'
+import logo from '../../assets/logo.svg'
 import { useAuth } from '../../context'
 import { userApi } from '../../api'
 import { PageWrapper } from '../../components/ui/PageWrapper'
@@ -228,7 +229,7 @@ export default function ProfilePage() {
                         <Card className="bg-white/5 border-white/10">
                             <div className="flex items-center gap-3 mb-6">
                                 <div className="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center border border-emerald-500/20">
-                                    <GraduationCap className="w-5 h-5 text-emerald-400" />
+                                    <img src={logo} alt="Academic Profile" className="w-6 h-6 object-contain" />
                                 </div>
                                 <h2 className="text-lg font-semibold text-white">Academic Profile</h2>
                             </div>

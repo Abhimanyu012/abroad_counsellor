@@ -340,3 +340,14 @@ body {
 .border-subtle-hover:hover {
   border-color: rgba(255, 255, 255, 0.08);
 }
+
+/* Disable input number spinners */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}

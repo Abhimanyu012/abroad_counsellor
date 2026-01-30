@@ -6,7 +6,7 @@ import {
     ArrowLeft, ArrowRight, Lock, Unlock, BookmarkCheck, Trash2, MapPin,
     Star, Calendar, FileText, Loader2, GraduationCap,
     CheckCircle, Trophy, Sparkles, ChevronRight, RefreshCw, BookOpen,
-    Building2, Globe, Clock, DollarSign
+    Building2, Globe, Clock, DollarSign, AlertTriangle
 } from 'lucide-react'
 import { userApi, selectionsApi } from '../../api'
 import { PageWrapper } from '../../components/ui/PageWrapper'
@@ -58,6 +58,8 @@ export default function LockedPage() {
         }
     }
 
+    const [unlockModal, setUnlockModal] = useState({ open: false, id: null })
+
     const handleLock = async (universityId) => {
         try {
             setSelections(prev => prev.map(s =>
@@ -74,8 +76,14 @@ export default function LockedPage() {
         }
     }
 
-    const handleUnlock = async (universityId) => {
-        if (!confirm('Unlock this university?')) return
+    const handleUnlockTrigger = (universityId) => {
+        setUnlockModal({ open: true, id: universityId })
+    }
+
+    const executeUnlock = async () => {
+        const universityId = unlockModal.id
+        setUnlockModal({ open: false, id: null })
+
         try {
             setSelections(prev => prev.map(s =>
                 s.universityId === universityId ? { ...s, status: 'SHORTLISTED' } : s
@@ -131,7 +139,10 @@ export default function LockedPage() {
         return (
             <Stage8View
                 university={lockedSelection.university}
-                onUnlock={() => handleUnlock(lockedSelection.universityId)}
+                onUnlock={() => handleUnlockTrigger(lockedSelection.universityId)}
+                unlockModal={unlockModal}
+                onCloseModal={() => setUnlockModal({ open: false, id: null })}
+                onConfirmUnlock={executeUnlock}
             />
         )
     }
@@ -203,7 +214,7 @@ export default function LockedPage() {
                                     selection={currentActiveSelection}
                                     isLockedExists={!!lockedSelection}
                                     onLock={handleLock}
-                                    onUnlock={handleUnlock}
+                                    onUnlock={handleUnlockTrigger}
                                     onStart={onStartApplicationHandler}
                                     justLocked={justLocked}
                                     checklist={checklist}
@@ -220,6 +231,51 @@ export default function LockedPage() {
                     </AnimatePresence>
                 </div>
             </div>
+
+            {/* Unlock Warning Modal */}
+            <AnimatePresence>
+                {unlockModal.open && (
+                    <motion.div
+                        initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+                    >
+                        <motion.div
+                            initial={{ scale: 0.95, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.95, opacity: 0 }}
+                            className="max-w-md w-full bg-zinc-900 border border-white/10 rounded-2xl p-6 shadow-2xl"
+                        >
+                            <div className="flex items-center gap-4 mb-4">
+                                <div className="w-12 h-12 rounded-full bg-amber-500/10 flex items-center justify-center border border-amber-500/20">
+                                    <AlertTriangle className="w-6 h-6 text-amber-500" />
+                                </div>
+                                <div>
+                                    <h3 className="text-lg font-bold text-white">Unlock University?</h3>
+                                    <p className="text-sm text-zinc-400">This action has consequences.</p>
+                                </div>
+                            </div>
+
+                            <p className="text-zinc-400 text-sm leading-relaxed mb-6">
+                                Unlocking will <span className="text-white font-bold">remove your application roadmap</span> and delete all AI-generated tasks for this university. You will have to start over if you lock it again.
+                            </p>
+
+                            <div className="flex gap-3">
+                                <Button
+                                    variant="ghost"
+                                    className="flex-1 hover:bg-white/5"
+                                    onClick={() => setUnlockModal({ open: false, id: null })}
+                                >
+                                    Cancel
+                                </Button>
+                                <Button
+                                    className="flex-1 bg-amber-600 hover:bg-amber-700 text-white border-amber-500/20"
+                                    onClick={executeUnlock}
+                                >
+                                    Yes, Unlock
+                                </Button>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </PageWrapper>
     )
 }
@@ -359,17 +415,31 @@ function DetailView({ selection, isLockedExists, onLock, onUnlock, onStart, just
                         </div>
                     </motion.div>
                 ) : (
-                    <div className="border border-white/5 bg-zinc-900/20 rounded-3xl p-12 text-center max-w-2xl mx-auto">
-                        <Trophy className="w-16 h-16 text-zinc-800 mx-auto mb-6" />
-                        <h2 className="text-2xl font-bold text-white mb-4">You're one step away!</h2>
-                        <p className="text-zinc-500 mb-8 leading-relaxed">
-                            Once you lock this choice, we'll unlock a personalized application roadmap, required documents checklist, and AI-powered tasks specifically for {uni.name}.
+                    <div className="border border-amber-500/20 bg-amber-500/5 rounded-3xl p-12 text-center max-w-2xl mx-auto shadow-[0_0_100px_rgba(245,158,11,0.1)]">
+                        <Lock className="w-16 h-16 text-amber-500 mx-auto mb-6" />
+                        <h2 className="text-3xl font-black text-white mb-4 uppercase tracking-tighter italic">Critical Step Required</h2>
+                        <p className="text-zinc-400 mb-8 leading-relaxed text-lg">
+                            <strong className="text-white">You must lock one university</strong> to proceed. This action transforms your Dashboard into a personalized application manager for <span className="text-amber-400 font-bold">{uni.name}</span>.
                         </p>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 text-left max-w-lg mx-auto">
+                            <div className="bg-black/40 p-3 rounded-lg border border-amber-500/10 flex items-center gap-3">
+                                <FileText className="w-5 h-5 text-amber-500" />
+                                <span className="text-sm text-zinc-300">Unlocks Checklist</span>
+                            </div>
+                            <div className="bg-black/40 p-3 rounded-lg border border-amber-500/10 flex items-center gap-3">
+                                <Sparkles className="w-5 h-5 text-amber-500" />
+                                <span className="text-sm text-zinc-300">Activates AI Guide</span>
+                            </div>
+                        </div>
+
                         {!isLockedExists && (
-                            <Button onClick={() => onLock(uni.id)} className="bg-white text-black hover:bg-zinc-200 px-8 h-12 font-bold">
-                                Lock and Reveal Preparation Guide
+                            <Button onClick={() => onLock(uni.id)} className="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-black px-10 h-14 font-black text-lg shadow-[0_0_30px_rgba(245,158,11,0.4)]">
+                                <Lock className="w-5 h-5 mr-2" />
+                                Confirm & Lock Choice
                             </Button>
                         )}
+                        <p className="mt-4 text-xs text-zinc-500 font-medium">You can unlock this later if needed.</p>
                     </div>
                 )}
             </div>
@@ -447,7 +517,7 @@ function ApplicationGuidance({ university, checklist, onToggle }) {
     )
 }
 
-function Stage8View({ university, onUnlock }) {
+function Stage8View({ university, onUnlock, unlockModal, onCloseModal, onConfirmUnlock }) {
     return (
         <PageWrapper>
             <Navbar />
@@ -512,6 +582,51 @@ function Stage8View({ university, onUnlock }) {
                     </div>
                 </motion.div>
             </div>
+
+            {/* Unlock Warning Modal */}
+            <AnimatePresence>
+                {unlockModal?.open && (
+                    <motion.div
+                        initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+                    >
+                        <motion.div
+                            initial={{ scale: 0.95, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.95, opacity: 0 }}
+                            className="max-w-md w-full bg-zinc-900 border border-white/10 rounded-2xl p-6 shadow-2xl"
+                        >
+                            <div className="flex items-center gap-4 mb-4">
+                                <div className="w-12 h-12 rounded-full bg-amber-500/10 flex items-center justify-center border border-amber-500/20">
+                                    <AlertTriangle className="w-6 h-6 text-amber-500" />
+                                </div>
+                                <div>
+                                    <h3 className="text-lg font-bold text-white">Unlock University?</h3>
+                                    <p className="text-sm text-zinc-400">This action has consequences.</p>
+                                </div>
+                            </div>
+
+                            <p className="text-zinc-400 text-sm leading-relaxed mb-6">
+                                Unlocking will <span className="text-white font-bold">remove your application roadmap</span> and delete all AI-generated tasks for this university. You will have to start over if you lock it again.
+                            </p>
+
+                            <div className="flex gap-3">
+                                <Button
+                                    variant="ghost"
+                                    className="flex-1 hover:bg-white/5"
+                                    onClick={onCloseModal}
+                                >
+                                    Cancel
+                                </Button>
+                                <Button
+                                    className="flex-1 bg-amber-600 hover:bg-amber-700 text-white border-amber-500/20"
+                                    onClick={onConfirmUnlock}
+                                >
+                                    Yes, Unlock
+                                </Button>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </PageWrapper>
     )
 }

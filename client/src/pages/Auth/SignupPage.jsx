@@ -3,7 +3,8 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { Mail, Lock, User, ArrowRight, GraduationCap } from 'lucide-react'
+import { Mail, Lock, User, ArrowRight } from 'lucide-react'
+import logo from '../../assets/logo.svg'
 import { useAuth } from '../../context'
 import { PageWrapper } from '../../components/ui/PageWrapper'
 import { GlassCard } from '../../components/ui/Card'
@@ -64,10 +65,7 @@ export default function SignupPage() {
                 {/* Logo */}
                 <div className="text-center mb-10">
                     <Link to="/" className="inline-flex items-center gap-3 group">
-                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-violet-500/20 group-hover:scale-110 transition-transform">
-                            <GraduationCap className="w-6 h-6 text-white" />
-                        </div>
-                        <span className="text-2xl font-bold text-white tracking-tight">AICOUNSELLOR</span>
+                        <img src={logo} alt="AICOUNSELLOR" className="w-10 h-10 rounded-xl shadow-lg" />
                     </Link>
                     <p className="text-zinc-400 mt-3 font-medium">Create your account to get started.</p>
                 </div>

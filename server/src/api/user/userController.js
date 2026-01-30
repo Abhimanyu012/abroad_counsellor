@@ -273,4 +273,33 @@ export const updateStage = async (req, res) => {
     }
 }
 
-export default { getProfile, updateProfile, completeOnboarding, updateStage }
+/**
+ * POST /api/user/reset-stage
+ * Reset user stage to beginning (Landing)
+ */
+export const resetStage = async (req, res) => {
+    try {
+        const user = await prisma.user.update({
+            where: { id: req.user.id },
+            data: {
+                currentStage: 1, // Landing
+                onboardingComplete: false
+            },
+            select: {
+                id: true,
+                currentStage: true,
+                onboardingComplete: true
+            }
+        })
+
+        res.json({
+            message: 'Stage reset successful',
+            user
+        })
+    } catch (error) {
+        console.error('Reset stage error:', error)
+        res.status(500).json({ error: 'Failed to reset stage' })
+    }
+}
+
+export default { getProfile, updateProfile, completeOnboarding, updateStage, resetStage }

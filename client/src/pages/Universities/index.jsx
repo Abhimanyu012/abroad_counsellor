@@ -166,6 +166,35 @@ export default function UniversitiesPage() {
         return { level: 'Medium', color: 'text-yellow-400 bg-yellow-500/10' }
     }
 
+    // AI Insights Generator
+    const getInsights = (uni) => {
+        const fits = []
+        const risks = []
+
+        if (user?.gpa) {
+            const diff = user.gpa - uni.minGpa
+            if (diff >= 0.2) fits.push('Strong academic profile match')
+            else if (diff < -0.2) risks.push('GPA below average requirement')
+        }
+
+        if (user?.budget) {
+            if (uni.tuitionFeeUsd <= user.budget) fits.push('Within your budget range')
+            else risks.push(`Tuition exceeds budget by $${((uni.tuitionFeeUsd - user.budget) / 1000).toFixed(1)}k`)
+        }
+
+        if (user?.targetCountry === uni.country) {
+            fits.push('Matches your dream destination')
+        }
+
+        if (uni.acceptanceRate < 20) {
+            risks.push('Highly competitive admission')
+        } else if (uni.acceptanceRate > 70) {
+            fits.push('High acceptance probability')
+        }
+
+        return { fits, risks }
+    }
+
     // Optimized Stagger
     const getStagger = (index) => Math.min(index * 0.05, 0.3);
 
@@ -341,14 +370,34 @@ export default function UniversitiesPage() {
                                             {(() => {
                                                 const acceptance = getAcceptanceChance(uni)
                                                 const cost = getCostLevel(uni)
+                                                const { fits, risks } = getInsights(uni)
+
                                                 return (
-                                                    <div className="flex gap-2 mb-4">
-                                                        <span className={`px-2 py-1 rounded text-[10px] font-bold ${acceptance.color}`}>
-                                                            Chance: {acceptance.level}
-                                                        </span>
-                                                        <span className={`px-2 py-1 rounded text-[10px] font-bold ${cost.color}`}>
-                                                            Cost: {cost.level}
-                                                        </span>
+                                                    <div className="space-y-3 mb-4">
+                                                        <div className="flex gap-2">
+                                                            <span className={`px-2 py-1 rounded text-[10px] font-bold ${acceptance.color}`}>
+                                                                Chance: {acceptance.level}
+                                                            </span>
+                                                            <span className={`px-2 py-1 rounded text-[10px] font-bold ${cost.color}`}>
+                                                                Cost: {cost.level}
+                                                            </span>
+                                                        </div>
+
+                                                        {/* AI Insights Section */}
+                                                        <div className="p-3 bg-zinc-900/50 rounded-xl border border-white/5 space-y-2">
+                                                            {fits.slice(0, 1).map((fit, i) => (
+                                                                <div key={i} className="flex items-start gap-1.5 text-[10px] text-zinc-400">
+                                                                    <CheckCircle className="w-3 h-3 text-emerald-500 shrink-0 mt-0.5" />
+                                                                    <span>{fit}</span>
+                                                                </div>
+                                                            ))}
+                                                            {risks.slice(0, 1).map((risk, i) => (
+                                                                <div key={i} className="flex items-start gap-1.5 text-[10px] text-zinc-400">
+                                                                    <Users className="w-3 h-3 text-amber-500 shrink-0 mt-0.5" />
+                                                                    <span>{risk}</span>
+                                                                </div>
+                                                            ))}
+                                                        </div>
                                                     </div>
                                                 )
                                             })()}

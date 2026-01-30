@@ -165,15 +165,26 @@ export const processChat = async (userId, message) => {
     finalContent = sanitizeOutput(finalContent)
     if (!finalContent) finalContent = "How can I help you further?"
 
-    // 7. Persist to Database
+    // 7. Persist to Database with Explicit Timestamps (Fix Sort Order)
+    const now = new Date()
+    const later = new Date(now.getTime() + 50) // Ensure assistant msg is definitely "newer"
+
     await prisma.$transaction([
-        prisma.chatMessage.create({ data: { userId, role: 'user', content: message } }),
+        prisma.chatMessage.create({
+            data: {
+                userId,
+                role: 'user',
+                content: message,
+                createdAt: now
+            }
+        }),
         prisma.chatMessage.create({
             data: {
                 userId,
                 role: 'assistant',
                 content: finalContent,
-                metadata: JSON.stringify({ model: result.model, toolResults })
+                metadata: JSON.stringify({ model: result.model, toolResults }),
+                createdAt: later
             }
         })
     ])
@@ -198,7 +209,7 @@ export const processChat = async (userId, message) => {
 export const getChatHistory = async (userId, limit = 50) => {
     const messages = await prisma.chatMessage.findMany({
         where: { userId },
-        orderBy: { createdAt: 'desc' },
+        orderBy: [{ createdAt: 'desc' }, { id: 'desc' }], // Secondary sort by ID fixes timestamp collisions
         take: limit
     })
 

@@ -14,6 +14,7 @@ const CounsellorPage = lazy(() => import('./pages/Counsellor'))
 const UniversitiesPage = lazy(() => import('./pages/Universities'))
 const LockedPage = lazy(() => import('./pages/Locked'))
 const ProfilePage = lazy(() => import('./pages/Profile'))
+const GuidePage = lazy(() => import('./pages/Guide'))
 
 // Loading Spinner
 const FullScreenLoader = () => (
@@ -75,6 +76,7 @@ function AppRouter() {
       <Routes>
         {/* Public Routes */}
         <Route path="/" element={<LandingPage />} />
+        <Route path="/guide" element={<GuidePage />} />
 
         {/* Auth Routes - redirect if logged in */}
         <Route path="/login" element={

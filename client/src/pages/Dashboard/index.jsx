@@ -8,6 +8,7 @@ import {
     BookOpen, CheckSquare, Square, Plus, MessageSquare,
     ArrowRight, TrendingUp, Clock, Loader2, Lock, Trash2, Edit2
 } from 'lucide-react'
+import logo from '../../assets/logo.svg'
 import { useAuth, useFlow, STAGES } from '../../context'
 import { todosApi, userApi } from '../../api'
 import { PageWrapper } from '../../components/ui/PageWrapper'
@@ -61,10 +62,15 @@ const InlineInput = ({ value, onSave, type = 'text', step, className }) => {
 }
 
 export default function DashboardPage() {
-    const { user, data, loading: authLoading, setData, updateUser } = useAuth()
+    const { user, data, loading: authLoading, setData, updateUser, refreshSelections } = useAuth()
     const { canAccessStage } = useFlow()
     const [newTodo, setNewTodo] = useState('')
     const [isUpdating, setIsUpdating] = useState(false)
+
+    useEffect(() => {
+        // Refresh stats on mount
+        refreshSelections()
+    }, [])
 
     // Use pre-fetched data
     const todos = data.todos || []
@@ -447,7 +453,7 @@ export default function DashboardPage() {
                 <h3 className="text-xl font-bold text-white mt-12 mb-6 text-center md:text-left">Your Next Steps</h3>
                 <div className="grid md:grid-cols-3 gap-4">
                     {[
-                        { to: '/counsellor', icon: MessageSquare, title: 'AICOUNSELLOR', desc: 'Get personalized advice', iconStyle: 'bg-violet-500/10 border-violet-500/20 text-violet-400', stage: STAGES.COUNSELLOR },
+                        { to: '/counsellor', icon: MessageSquare, title: (<div className="flex items-center gap-2"><img src={logo} alt="AICOUNSELLOR" className="w-6 h-6" /><span>AICOUNSELLOR</span></div>), desc: 'Get personalized advice', iconStyle: 'bg-violet-500/10 border-violet-500/20 text-violet-400', stage: STAGES.COUNSELLOR },
                         { to: '/universities', icon: GraduationCap, title: 'University Library', desc: 'Browse 60+ global unis', iconStyle: 'bg-cyan-500/10 border-cyan-500/20 text-cyan-400', stage: STAGES.UNIVERSITIES },
                         { to: '/locked', icon: Target, title: 'Final Selection', desc: 'Lock your decision', iconStyle: 'bg-emerald-500/10 border-emerald-500/20 text-emerald-400', stage: STAGES.LOCKED }
                     ].map((item) => {
