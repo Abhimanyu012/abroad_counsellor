@@ -1,7 +1,8 @@
 
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { GraduationCap, LayoutDashboard, MessageSquare, BookOpen, LogOut, Lock, Sparkles, Hexagon } from 'lucide-react';
+import { GraduationCap, LayoutDashboard, MessageSquare, BookOpen, LogOut, Lock, Sparkles } from 'lucide-react';
+import logo from '../../assets/logo.svg';
 import { useAuth, useFlow, STAGES } from '../../context';
 import { Button } from '../ui/Button';
 
@@ -28,8 +29,7 @@ export const Navbar = () => {
                     {/* Brand */}
                     <Link to="/dashboard" className="flex items-center gap-2.5 group mr-6">
                         <div className="relative w-8 h-8 flex items-center justify-center">
-                            <Hexagon className="w-8 h-8 text-violet-600 fill-violet-600/20 rotate-90" />
-                            <span className="absolute text-[10px] font-black text-white">AI</span>
+                            <img src={logo} alt="AICOUNSELLOR" className="w-8 h-8 rounded-md" />
                         </div>
                         <span className="text-sm font-black text-white tracking-[0.2em] hidden sm:block">AICOUNSELLOR</span>
                     </Link>
