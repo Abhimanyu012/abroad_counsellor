@@ -1,0 +1,11 @@
+{
+    "name": "aicounsellor-monorepo",
+    "private": true,
+    "scripts": {
+        "server:install": "cd server && npm install",
+        "server:build": "cd server && npx prisma generate",
+        "server:start": "cd server && npm start",
+        "client:install": "cd client && npm install",
+        "client:build": "cd client && npm run build"
+    }
+}

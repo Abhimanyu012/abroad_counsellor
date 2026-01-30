@@ -36,6 +36,18 @@ Railway will automatically run `npm install` (which triggers `prisma generate` v
 
 ---
 
+## ☁️ Backend Deployment (Render)
+
+1.  **Create a New Web Service** on [Render](https://render.com/).
+2.  **Connect your GitHub Repository**.
+3.  **Configure Build & Start Settings**:
+    -   **Base Directory**: `server`
+    -   **Build Command**: `npm install && npx prisma generate`
+    -   **Start Command**: `npx prisma db push && node index.js` (or `npm start`)
+4.  **Set Environment Variables**: Same as Railway (DATABASE_URL, JWT_SECRET, GROQ_API_KEY, etc.).
+
+---
+
 ## 🛠 Troubleshooting
 
 -   **CORS Issues**: Ensure the `CLIENT_URL` in Railway precisely matches your Netlify URL (no trailing slash usually, or exactly what the browser sends).
