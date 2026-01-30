@@ -3,48 +3,49 @@ import 'dotenv/config'
 import express from 'express'
 import cors from 'cors'
 
+// Route imports
+import authRoutes from './src/api/auth/index.js'
+import userRoutes from './src/api/user/index.js'
+import universitiesRoutes from './src/api/universities/index.js'
+import selectionsRoutes from './src/api/selections/index.js'
+import todosRoutes from './src/api/todos/index.js'
+import counsellorRoutes from './src/api/counsellor/index.js'
+
 const app = express()
 
-const corsOptions = {
+// Middleware
+app.use(cors({
     origin: function (origin, callback) {
         // Allow requests with no origin (like mobile apps or curl)
         if (!origin) return callback(null, true)
 
         // Allow development origins
-        if (origin.includes('localhost') || origin.includes('127.0.0.1') || origin.includes('0.0.0.0')) {
+        if (
+            origin.includes('localhost') ||
+            origin.includes('127.0.0.1') ||
+            origin.includes('0.0.0.0')
+        ) {
             return callback(null, true)
         }
 
-        // Check against CLIENT_URL (comma-separated) if provided
+        // Check against CLIENT_URL
         if (process.env.CLIENT_URL) {
             const allowedOrigins = process.env.CLIENT_URL.split(',').map(url => url.trim().replace(/\/$/, ''))
             const normalizedOrigin = origin.replace(/\/$/, '')
-            if (allowedOrigins.includes(normalizedOrigin)) return callback(null, true)
+
+            if (allowedOrigins.includes(normalizedOrigin)) {
+                return callback(null, true)
+            }
         }
 
-        // Allow Netlify and Render hosting domains
-        if (origin.includes('.netlify.app') || origin.includes('render.com')) return callback(null, true)
-
-        // Otherwise reject
+        // In production, we should be strict, but let's log the attempt for debugging
         console.log(`CORS blocked for origin: ${origin}`)
-        return callback(new Error('Not allowed by CORS'))
+        callback(new Error('Not allowed by CORS'))
     },
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
-    optionsSuccessStatus: 204,
-}
-
-app.use(cors(corsOptions))
-// Safely handle preflight OPTIONS requests without registering a '*' route
-app.use((req, res, next) => {
-    if (req.method === 'OPTIONS') {
-        // run the cors middleware for this request and then end with 204
-        return cors(corsOptions)(req, res, () => res.sendStatus(corsOptions.optionsSuccessStatus || 204))
-    }
-    next()
-})
-
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
+}))
 app.use(express.json())
 
 // Request logging in development
